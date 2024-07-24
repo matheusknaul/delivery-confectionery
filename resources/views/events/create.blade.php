@@ -1,9 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'Meu Pedido')
+@section('title', 'Cadastrar Produto')
 
 @section('content')
-
-<p>Hello World</p>
 
 @endsection

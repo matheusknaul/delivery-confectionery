@@ -4,6 +4,7 @@
 
 @section('content')
 
+{{$products}}
 <section>
     <div id="search-container" class="col-md-12">
         <h1>Procurar no Cardápio</h1>
@@ -27,7 +28,9 @@
               <li class="list-group-item">De R$50,00 por R$25,00</li>
             </ul>
             <div class="card-body">
-                <a href="#" class="btn btn-primary">Colocar no Carrinho</a>
+                <form action="/" method="GET" id="1">
+                    <input type="submit" class="btn btn-primary" value="Colocar no Carrinho">
+                </form>
             </div>
         </div>
 
