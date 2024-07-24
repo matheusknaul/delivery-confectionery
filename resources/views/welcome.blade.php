@@ -32,8 +32,36 @@
         </div>
 
         <!-- Fim do Foreach -->
-
     </div>
 </section>
+<section>
+    <!-- Início Foreach dos tipos de comida -->
+
+        <h2>Ex: Café Italiano</h2>
+        <div class="menu-container">
+            <!-- Início Foearch dos cards do cardápio do tipo -->
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">4 Cupcakes Red Velvet</h5>
+                  <p class="card-text">4 Cupcakes deliciosos com a massa Red Velvet.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">De R$50,00 por R$25,00</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Colocar no Carrinho</a>
+                </div>
+            </div>
+            <!-- Fim Foearch dos cards do cardápio do tipo-->
+        </div>
+    <!-- Fim Foreach dos tipos de comida -->
+</section>
+<!-- Inicio do IF Search -->
+<section>
+    <h2>Buscando por:</h2>
+</section>
+<!-- Fim do IF Search -->
+
 
 @endsection
