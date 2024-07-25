@@ -9,6 +9,8 @@ use App\Http\Controllers\CartController;
 
 Route::get('/', [ProductController::class, 'index']);
 Route::get('/create', [ProductController::class, 'create']);
+Route::post('/products', [ProductController::class, 'store']);
+Route::post('/', [ProductController::class, 'store']); #ver isso para adicionar no carrinho
 
 //Cart Routes
 

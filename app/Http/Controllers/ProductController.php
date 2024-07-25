@@ -12,12 +12,14 @@ class ProductController extends Controller
         $search = request('search');
 
         if($search){
-            $products = $search;
+            $products = Product::where([
+                ['title', 'like', '%'.$search.'%']
+            ]).get();
         }else{
-            $products = "Nada até agora";
+            $products = Product::all();
         }
 
-        return view('welcome', ['products' => $products]);
+        return view('welcome', ['products' => $products, 'search'=> $search]);
     }
 
     public function create(){
@@ -43,10 +45,12 @@ class ProductController extends Controller
 
             $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $requestImage->move(public_path('img/events'), $imageName); //estudar sobre esse método move
+            $requestImage->move(public_path('img/products'), $imageName); //estudar sobre esse método move
 
-            $event->image = $imageName;
+            $product->image = $imageName;
         }
+
+        $product->save();
 
         return redirect('/')->with('msg', 'Produto criado com sucesso');
     }

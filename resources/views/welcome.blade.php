@@ -13,26 +13,25 @@
     </div>
     <div id="promotion-day-container" class="col-md-12">
         <h2>Promoções do Dia</h2>
-        <p>Veja as promoções do dia</p>
+        <p class="subtitle">Veja as promoções do dia</p>
 
         <!-- Inicio Foreach -->
-
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Cupcake Red Velvet</h5>
-              <p class="card-text">Cupcake com massa Red Velvet e cobertura de chantilly</p>
+        <div id="cards-container" class="row">
+            @foreach ($products as $product)
+            <div class="card col-md-3">
+                <img src="/img/products/{{$product->image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{$product->title}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">R$5,00</li>
+                </ul>
+                <div class="card-body">
+                    <input type="submit" class="btn btn-primary" id="liveToastBtn" value="Colocar no Carrinho">
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">De R$5,50 por R$3,50</li>
-            </ul>
-            <div class="card-body">
-                <form action="/" method="GET" id="1">
-                    <input type="submit" class="btn btn-primary" value="Colocar no Carrinho">
-                </form>
-            </div>
+            @endforeach
         </div>
-
         <!-- Fim do Foreach -->
     </div>
 </section>

@@ -6,7 +6,7 @@
 
 <div id="product-create-container" class="col-md-6 offset-md-3">
     <h1>Cadastre seu produto</h1>
-    <form action="/product" method="POST" enctype="multipart/form-data">
+    <form action="/products" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="image">Imagem do produto:</label>
@@ -19,6 +19,15 @@
         <div class="form-group">
             <label for="title">Descrição:</label>
             <textarea name="description" id="description" class="form-control" placeholder="O que vai no produto?"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="title">Categoria</label>
+            <select name="category" id="category" class="form-control">
+                <option value="0">Alemã</option>
+                <option value="1">Francesa</option>
+                <option value="2">Italiana</option>
+                <option value="3">Brasileira</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="title">O produto é o especial da categoria?</label>
