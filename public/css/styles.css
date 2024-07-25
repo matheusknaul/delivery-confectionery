@@ -3,12 +3,31 @@
     font-family: 'Roboto';
 }
 
+.btn-primary{
+    background-color: #FB4570;
+    border: 2px solid #FB4570;
+}
+
+.btn-primary:hover{
+    background-color: #c03858;
+    border-color: #c03858;
+}
+
 /* Body */
 
 body{
     min-height: 100vh;
     padding-bottom: 100px;
     position: relative;
+}
+
+section{
+    display: block;
+    min-height: 100vh;
+}
+
+.section-search{
+    background-color: #f7f2e7;
 }
 
 /* Header */
@@ -18,11 +37,76 @@ header{
     border-bottom: 1px solid #ccc;
 }
 
+/* Navbar */
+
+nav{
+    background-color: #EFEBE0;
+}
+
+#navbar{
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+#navbar a{
+    font-size: 20px;
+    color:#4b4a4a;
+}
+
+#navbar a:hover{
+    color: #FB4570;
+}
+
+
+/* Promotion/Search day container */
+
+#search-container{
+    background-image: url("../img/banner_search.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1{
+    color: #EFEBE0;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 75%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#promotion-day-container{
+    height: 400px;
+    padding: 40px;
+    text-align: center;
+
+}
+
+#promotion-day-container h2{
+    color: #c03858;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+#promotion-day-container p{
+    color: #FB4570;
+}
+
+/* Menu container */
+
+
+
 /* Footer */
 
 footer{
     text-align: center;
-    background-color: #353E48;
+    background-color: #3b3a38;
     color: #FFf;
     padding: 30px;
     position: absolute;
